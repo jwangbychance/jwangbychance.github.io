@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        atkinson: ["Atkinson Hyperlegible", "sans-serif"]
+        "open-sans": ["Open Sans", "sans-serif"]
       }
     },
   },
