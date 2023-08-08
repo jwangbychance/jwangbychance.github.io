@@ -6,7 +6,7 @@ const Navbar = () => {
     <div className="font-open-sans text-sm w-full flex justify-center gap-5 p-3">
       <img
         className="mr-auto border-[#d3b6ff] border-2 rounded-full p-3"
-        src="../../public/favicon.ico"
+        src="../../public/favicon.ico?"
       ></img>
       <div className="mr-auto p-5 flex gap-3">
         <NavLink
