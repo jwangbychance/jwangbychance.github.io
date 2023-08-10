@@ -8,7 +8,7 @@ const Navbar = () => {
         className="mr-auto border-[#d3b6ff] border-2 rounded-full p-3"
         src="/favicon.ico"
       ></img>
-      <div className="mr-auto p-5 flex gap-3">
+      <div className="mr-auto p-5 flex gap-3 md:-ml-24">
         <NavLink
           exact
           to="/"

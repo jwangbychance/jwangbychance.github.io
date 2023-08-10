@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import About from "./components/About.jsx";
-import ProjectGrid from "./components/ProjectGrid.jsx";
+import ProjectGrid from "./components/ProjectGrid/ProjectGrid.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
