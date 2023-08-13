@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar.jsx";
 import { Link } from "react-router-dom";
 import Footer from "./components/Footer.jsx";
 
-const App = () => {
+const Home = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const App = () => {
         <h1
           className={`transition-all ${
             show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-          } duration-500 ease-in-out text-5xl font-bold mt-10`}
+          } duration-500 ease-in-out text-4xl md:text-5xl font-bold mt-10`}
         >
           Hey, I'm Jackson!
         </h1>
@@ -40,4 +40,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;

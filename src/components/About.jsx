@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 const About = () => {
   return (
-    <div>
+    <div className="font-open-sans">
       <Navbar />
       <div>About me</div>
       <Footer />

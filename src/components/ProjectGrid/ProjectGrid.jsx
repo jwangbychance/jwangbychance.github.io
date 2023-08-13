@@ -12,7 +12,7 @@ const ProjectGrid = () => {
     setShowModal((prev) => !prev);
   };
   return (
-    <div className="flex flex-col">
+    <div className="font-open-sans flex flex-col">
       <Navbar />
       <div
         onClick={setShowModal}

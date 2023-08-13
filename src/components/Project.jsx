@@ -7,7 +7,7 @@ const Project = ({ showModal, toggleModal }) => {
       isOpen={showModal}
       onRequestClose={toggleModal}
       closeTimeoutMS={500}
-      className="border-2 border-[#d3b6ff] rounded-xl p-5 w-[90%] h-[90%] relative top-10 left-20 bg-white"
+      className="border-2 border-[#d3b6ff] rounded-xl p-5 w-[90%] h-[90%] relative top-5 md:top-10 left-5 md:left-20 bg-white"
     >
       <div>Here is my first project</div>
       <button

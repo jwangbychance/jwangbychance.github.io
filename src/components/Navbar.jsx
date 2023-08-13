@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="font-open-sans text-sm w-full flex justify-center gap-5 p-3">
+    <div className="font-open-sans text-sm w-full flex justify-center md:gap-3 p-3">
       <img
         className="mr-auto border-[#d3b6ff] border-2 rounded-full p-3"
         src="/favicon.ico"
