@@ -16,7 +16,7 @@ const ProjectGrid = () => {
       <Navbar />
       <div
         onClick={setShowModal}
-        className="cursor-pointer m-5 p-3 border-[#d3b6ff] border-2 rounded-xl w-3/12"
+        className="cursor-pointer m-5 p-3 border-[#d3b6ff] border-2 rounded-xl w-3/12 scale-[98%] hover:scale-100 transition ease-in-out duration-500 shadow-lg"
       >
         Project 1
       </div>

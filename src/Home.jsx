@@ -17,12 +17,22 @@ const Home = () => {
         <h1
           className={`transition-all ${
             show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
-          } duration-500 ease-in-out text-4xl md:text-5xl font-bold mt-10`}
+          } duration-500 ease-in-out text-4xl md:text-5xl font-bold mt-10 mb-3`}
         >
           Hey, I'm Jackson!
         </h1>
-        <div>UTS student with a passion for Web Dev</div>
-        <div>
+        <div
+          className={`transition-all ${
+            show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+          } duration-500 ease-in-out delay-200`}
+        >
+          UTS student with a passion for Web Dev
+        </div>
+        <div
+          className={`transition-all ${
+            show ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+          } duration-500 ease-in-out delay-[400ms]`}
+        >
           Check out my{" "}
           <Link
             to="projects"
@@ -33,7 +43,7 @@ const Home = () => {
             </span>
           </Link>
         </div>
-        <div>Resume PDF download</div>
+        {/* <div>Resume PDF download</div> */}
       </div>
       <Footer />
     </div>
