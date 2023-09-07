@@ -21,18 +21,8 @@ const Home = () => {
         >
           Hey, I'm Jackson!
         </h1>
-        <div
-          className={`transition-all ${
-            show ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-          } duration-500 ease-in-out delay-200`}
-        >
-          UTS student with a passion for Web Dev
-        </div>
-        <div
-          className={`transition-all ${
-            show ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
-          } duration-500 ease-in-out delay-[400ms]`}
-        >
+        <div>UTS student with a passion for Web Dev</div>
+        <div>
           Check out my{" "}
           <Link
             to="projects"
