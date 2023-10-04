@@ -21,10 +21,7 @@ const Home = () => {
         >
           Hey, I'm Jackson!
         </h1>
-        <img
-          src="./src/assets/p5_joker.png"
-          className="rounded-full w-28 md:w-60"
-        />
+        <img src="/assets/p5_joker.png" className="rounded-full w-28 md:w-60" />
         <div>UTS student with a passion for Web Dev</div>
         <div>
           Check out my{" "}
@@ -38,7 +35,7 @@ const Home = () => {
           </Link>
         </div>
         <a
-          href="./src/assets/JacksonWang_Resume.pdf"
+          href="/assets/JacksonWang_Resume.pdf"
           download
           className="group font-semibold text-[#8b3dff] transition-all duration-300 ease-in-out"
         >
