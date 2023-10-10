@@ -5,22 +5,84 @@ import Modal from "react-modal";
 import "./ProjectGrid.css";
 import Project from "../Project";
 
-const ProjectGrid = () => {
-  const [showModal, setShowModal] = useState(false);
+const projects = [
+  {
+    title: "Gecko business landing page",
+    content:
+      "I created a responsive landing page that is dynamic to each rental business with the purpose of showcasing their rental categories and products",
+    tech: "React, Tailwind CSS, Next.js",
+  },
+  {
+    title: "Continue as guest at checkout feature",
+    content:
+      "I developed the feature to allow users to continue as guest rather than signing up to the platform at checkout for a faster user experience",
+    tech: "MongoDB, GraphQL, React, Stripe API",
+  },
+  {
+    title: "Filters feature for specific categories",
+    content:
+      "I introduced filters that dynamically render for each specific category",
+    tech: "Next.js, React, Tailwind CSS, Material UI",
+  },
+  {
+    title: "Estimate delivery + setup price on product pages",
+    content:
+      "I introduced a feature that allows users to instead estimate the delivery price for their address rather than having to proceed to checkout just to check the delivery price on product pages with delivery available",
+    tech: "React.js, Tailwind CSS, GraphQL",
+  },
+  {
+    title: "New cart style popup",
+    content:
+      "I reworked the way users check their cart. Instead of having to be redirected to a /cart page, they can easily press the cart icon to check all their rented products in a simple popup",
+    tech: "React, Tailwind CSS",
+  },
+  {
+    title: "New responsive searchbar",
+    content:
+      "I reworked the search as a popup so that users can seamlessly input what product and from where rather than being redirected to a /search page",
+    tech: "React, Tailwind CSS",
+  },
+  {
+    title: "Login Auth",
+    content:
+      "I created a full stack web application using the MERN stack that authenticates and authorises users using cookie sessions",
+    tech: "React, Express.js, MongoDB, Tailwind CSS, Node.js",
+  },
+];
 
+const ProjectBox = ({ title, content, tech }) => {
+  const [showModal, setShowModal] = useState(false);
   const toggleModal = () => {
     setShowModal((prev) => !prev);
   };
   return (
-    <div className="font-open-sans flex flex-col">
-      <Navbar />
+    <div>
       <div
-        onClick={setShowModal}
+        onClick={toggleModal}
         className="cursor-pointer m-5 p-3 border-[#d3b6ff] border-2 rounded-xl w-3/12 scale-[98%] hover:scale-100 transition ease-in-out duration-500 shadow-lg"
       >
-        Project 1
+        {title}
       </div>
-      <Project showModal={showModal} toggleModal={toggleModal} />
+      <Project
+        title={title}
+        content={content}
+        tech={tech}
+        showModal={showModal}
+        toggleModal={toggleModal}
+      />
+    </div>
+  );
+};
+
+const ProjectGrid = () => {
+  return (
+    <div className="font-open-sans flex flex-col">
+      <Navbar />
+      <div>
+        {projects.map(({ title, content, tech }) => (
+          <ProjectBox title={title} content={content} tech={tech} />
+        ))}
+      </div>
       <Footer />
     </div>
   );

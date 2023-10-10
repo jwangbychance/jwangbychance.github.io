@@ -1,15 +1,15 @@
 import { useState } from "react";
 import Modal from "react-modal";
 
-const Project = ({ showModal, toggleModal }) => {
+const Project = ({ title, content, tech, showModal, toggleModal }) => {
   return (
     <Modal
       isOpen={showModal}
       onRequestClose={toggleModal}
       closeTimeoutMS={500}
-      className="border-2 border-[#d3b6ff] rounded-xl p-5 w-[90%] h-[90%] relative top-5 md:top-10 left-5 md:left-20 bg-white"
+      className="border-2 border-[#d3b6ff] rounded-xl p-5 h-[90%] mx-auto top-10 w-[90%] relative bg-white"
     >
-      <div>Here is my first project</div>
+      <div className="font-bold text-2xl mb-8 text-[#8b3dff]">{title}</div>
       <button
         onClick={toggleModal}
         className="text-black w-8 absolute top-3 right-3"
@@ -29,6 +29,8 @@ const Project = ({ showModal, toggleModal }) => {
           />
         </svg>
       </button>
+      <div className="font-semibold mb-5">Technologies: {tech}</div>
+      <div>{content}</div>
     </Modal>
   );
 };
