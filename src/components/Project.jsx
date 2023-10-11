@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Modal from "react-modal";
 
-const Project = ({ title, content, tech, showModal, toggleModal }) => {
+const Project = ({ title, content, tech, src, showModal, toggleModal }) => {
   return (
     <Modal
       isOpen={showModal}
@@ -30,7 +30,14 @@ const Project = ({ title, content, tech, showModal, toggleModal }) => {
         </svg>
       </button>
       <div className="font-semibold mb-5">Technologies: {tech}</div>
-      <div>{content}</div>
+      <div className="mb-10">{content}</div>
+      <div className="flex justify-center">
+        {src.endsWith("png") ? (
+          <img src={src} width={1200} />
+        ) : (
+          <iframe controls src={src} width={1020} height={580} />
+        )}
+      </div>
     </Modal>
   );
 };
