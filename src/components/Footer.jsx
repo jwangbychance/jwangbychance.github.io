@@ -38,7 +38,7 @@ const Footer = () => {
           </svg>
         </a>
         <a
-          className="mt-[1px] ml-[3px]"
+          className="mt-[2px] ml-[3px]"
           href="https://www.linkedin.com/in/jackson-wang-46487a21b/"
           target="_blank"
         >
