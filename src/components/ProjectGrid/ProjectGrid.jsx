@@ -66,7 +66,7 @@ const ProjectBox = ({ title, content, tech, src }) => {
     <div>
       <div
         onClick={toggleModal}
-        className="cursor-pointer font-semibold flex justify-center items-center m-5 p-3 border-[#d3b6ff] border-2 rounded-xl w-[300px] h-[200px] scale-[98%] hover:scale-100 transition ease-in-out duration-500 shadow-lg"
+        className="cursor-pointer font-semibold flex justify-center items-center m-5 p-3 border-[#d3b6ff] border-2 rounded-xl w-[300px] h-[150px] md:w-[300px] md:h-[200px] scale-[98%] hover:scale-100 transition ease-in-out duration-500 shadow-lg"
       >
         {title}
       </div>
@@ -86,12 +86,14 @@ const ProjectGrid = () => {
   return (
     <div className="font-open-sans flex flex-col">
       <Navbar />
-      <div className="flex flex-wrap text-center">
+      <div className="flex flex-wrap text-center justify-center md:justify-start">
         {projects.map(({ title, content, tech, src }) => (
           <ProjectBox title={title} content={content} tech={tech} src={src} />
         ))}
       </div>
-      <Footer />
+      <div className="hidden md:block">
+        <Footer />
+      </div>
     </div>
   );
 };
