@@ -51,7 +51,7 @@ const projects = [
   {
     title: "Login Auth",
     content:
-      "I created a full stack web application using the MERN stack that authenticates and authorises users using cookie sessions",
+      "I created a full stack web application using the MERN stack that authenticates and authorises users using cookie sessions as a personal project.",
     tech: "React, Express.js, MongoDB, Tailwind CSS, Node.js",
     src: "/assets/login_example.png",
   },
@@ -66,7 +66,7 @@ const ProjectBox = ({ title, content, tech, src }) => {
     <div>
       <div
         onClick={toggleModal}
-        className="cursor-pointer m-5 p-3 border-[#d3b6ff] border-2 rounded-xl w-3/12 scale-[98%] hover:scale-100 transition ease-in-out duration-500 shadow-lg"
+        className="cursor-pointer font-semibold flex justify-center items-center m-5 p-3 border-[#d3b6ff] border-2 rounded-xl w-[300px] h-[200px] scale-[98%] hover:scale-100 transition ease-in-out duration-500 shadow-lg"
       >
         {title}
       </div>
@@ -86,7 +86,7 @@ const ProjectGrid = () => {
   return (
     <div className="font-open-sans flex flex-col">
       <Navbar />
-      <div>
+      <div className="flex flex-wrap text-center">
         {projects.map(({ title, content, tech, src }) => (
           <ProjectBox title={title} content={content} tech={tech} src={src} />
         ))}
