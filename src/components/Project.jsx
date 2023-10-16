@@ -39,13 +39,7 @@ const Project = ({ title, content, tech, src, showModal, toggleModal }) => {
         {src.endsWith("png") ? (
           <img src={src} width={1200} />
         ) : (
-          <iframe
-            controls
-            src={src}
-            width={1020}
-            height={580}
-            allowFullScreen
-          />
+          <iframe controls src={src} height={170} allowFullScreen />
         )}
       </div>
     </Modal>
