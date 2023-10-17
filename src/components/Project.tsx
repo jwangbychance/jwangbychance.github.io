@@ -1,7 +1,16 @@
 import { useState } from "react";
 import Modal from "react-modal";
 
-const Project = ({ title, content, tech, src, showModal, toggleModal }) => {
+interface ProjectProps {
+  title: string;
+  content: string;
+  tech: string;
+  src: string;
+  showModal: boolean;
+  toggleModal: () => {};
+}
+
+const Project: React.FC<ProjectProps> = ({ title, content, tech, src, showModal, toggleModal }) => {
   return (
     <Modal
       isOpen={showModal}
@@ -40,7 +49,6 @@ const Project = ({ title, content, tech, src, showModal, toggleModal }) => {
           <img src={src} width={1200} />
         ) : (
           <iframe
-            controls
             src={src}
             width={window.innerHeight < 700 ? 300 : 1020}
             height={window.innerHeight < 700 ? 200 : 580}

@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const Footer = () => {
   return (
     <div className="bottom-10 absolute w-full">

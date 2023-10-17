@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import Navbar from "./components/Navbar.jsx";
+import Navbar from "./components/Navbar.js";
 import { Link } from "react-router-dom";
-import Footer from "./components/Footer.jsx";
+import Footer from "./components/Footer.js";
 
 const Home = () => {
   const [show, setShow] = useState(false);

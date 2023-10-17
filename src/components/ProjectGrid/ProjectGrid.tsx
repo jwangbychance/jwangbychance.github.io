@@ -1,9 +1,15 @@
 import { useState } from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import Modal from "react-modal";
 import "./ProjectGrid.css";
 import Project from "../Project";
+
+interface ProjectBoxProps {
+  title: string;
+  content: string;
+  tech: string;
+  src: string;
+}
 
 const projects = [
   {
@@ -57,7 +63,7 @@ const projects = [
   },
 ];
 
-const ProjectBox = ({ title, content, tech, src }) => {
+const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, tech, src }) => {
   const [showModal, setShowModal] = useState(false);
   const toggleModal = () => {
     setShowModal((prev) => !prev);
