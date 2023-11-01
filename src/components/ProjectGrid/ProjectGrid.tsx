@@ -61,9 +61,21 @@ const projects = [
     tech: "React, Express.js, MongoDB, Tailwind CSS, Node.js",
     src: "/assets/login_example.png",
   },
+  {
+    title: "Steam Tracker",
+    content:
+      "I created a Next.js application that allows users to search steam IDs using the Steam Web API. It displays the steam users information such as their friends, recently owned games, game news and achievements.",
+    tech: "React, Next.js, Tailwind CSS",
+    src: "/assets/steam_tracker.mp4",
+  },
 ];
 
-const ProjectBox: React.FC<ProjectBoxProps> = ({ title, content, tech, src }) => {
+const ProjectBox: React.FC<ProjectBoxProps> = ({
+  title,
+  content,
+  tech,
+  src,
+}) => {
   const [showModal, setShowModal] = useState(false);
   const toggleModal = () => {
     setShowModal((prev) => !prev);
