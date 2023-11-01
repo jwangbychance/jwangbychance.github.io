@@ -7,10 +7,17 @@ interface ProjectProps {
   tech: string;
   src: string;
   showModal: boolean;
-  toggleModal: () => {};
+  toggleModal: () => void;
 }
 
-const Project: React.FC<ProjectProps> = ({ title, content, tech, src, showModal, toggleModal }) => {
+const Project: React.FC<ProjectProps> = ({
+  title,
+  content,
+  tech,
+  src,
+  showModal,
+  toggleModal,
+}) => {
   return (
     <Modal
       isOpen={showModal}
