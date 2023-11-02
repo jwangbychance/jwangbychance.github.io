@@ -59,7 +59,7 @@ const projects = [
     content:
       "I created a full stack web application using the MERN stack that authenticates and authorises users using cookie sessions as a personal project.",
     tech: "React, Express.js, MongoDB, Tailwind CSS, Node.js",
-    src: "/assets/login_example.png",
+    src: "/assets/login_auth.mp4",
   },
   {
     title: "Steam Tracker",
