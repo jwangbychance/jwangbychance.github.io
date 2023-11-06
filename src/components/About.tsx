@@ -32,7 +32,7 @@ const About = () => {
               </div>
               <div className="mb-5">
                 I was given an opportunity to work at a hyper-growth startup
-                company that was accelerated by the{" "}
+                company (Gecko.rent) that was accelerated by the{" "}
                 <a
                   href="https://www.techstars.com/"
                   className="group text-[#8b3dff] transition-all duration-300 ease-in-out"

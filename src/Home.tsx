@@ -22,7 +22,8 @@ const Home = () => {
           Hey, I'm Jackson!
         </h1>
         <img src="/assets/p5_joker.png" className="rounded-full w-28 md:w-60" />
-        <div>UTS student with a passion for Web Dev</div>
+        <div>Full Stack Software Engineer</div>
+        <div className="-my-5">UTS</div>
         <div>
           Check out my{" "}
           <Link
