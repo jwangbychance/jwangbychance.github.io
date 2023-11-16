@@ -27,8 +27,9 @@ const About = () => {
                 of Technology Sydney.
               </div>
               <div className="mb-5">
-                I'm interested in web dev (both frontend and backend) and using
-                Node.js to program my very own Discord bot for fun.
+                I'm interested in web dev (both frontend and backend),
+                contributing to open source projects and using Node.js to
+                program my very own Discord bot for fun.
               </div>
               <div className="mb-5">
                 I was given an opportunity to work at a hyper-growth startup
