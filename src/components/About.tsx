@@ -28,8 +28,16 @@ const About = () => {
               </div>
               <div className="mb-5">
                 I'm interested in web dev (both frontend and backend),
-                contributing to open source projects and using Node.js to
-                program my very own Discord bot for fun.
+                contributing to open source projects such as{" "}
+                <a
+                  href="https://vitest.dev/"
+                  className="group text-[#8b3dff] transition-all duration-300 ease-in-out"
+                >
+                  <span className="bg-left-bottom bg-gradient-to-r from-[#8b3dff] to-[#8b3dff] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                    Vitest
+                  </span>
+                </a>{" "}
+                and using Node.js to program my very own Discord bot for fun.
               </div>
               <div className="mb-5">
                 I was given an opportunity to work at a hyper-growth startup
