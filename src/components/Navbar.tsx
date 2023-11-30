@@ -4,8 +4,8 @@ const Navbar = () => {
   return (
     <div className="font-open-sans text-sm w-full flex justify-center md:gap-3 p-3">
       <img
-        className="mr-auto border-[#d3b6ff] border-2 rounded-full p-3"
-        src="/favicon.ico"
+        className="mr-auto h-10 md:h-14 self-center md:self-start"
+        src="/assets/logo.png"
       ></img>
       <div className="mr-auto p-5 flex gap-3 md:-ml-24">
         <NavLink
