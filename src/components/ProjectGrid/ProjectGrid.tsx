@@ -137,7 +137,7 @@ const ProjectGrid = () => {
           ))}
         </div>
       </div>
-      <div className="relative mt-20 md:mt-[139px]">
+      <div className="relative mt-20 md:mt-[157px]">
         <Footer />
       </div>
     </div>
