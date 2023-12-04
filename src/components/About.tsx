@@ -66,12 +66,20 @@ const About = () => {
                 </Link>
               </div>
             </div>
-            <div className="flex md:block mt-5 md:-mt-20 md:ml-auto md:mr-20 md:w-fit">
+            <div className="flex md:block mt-5 md:-mt-20 md:ml-auto md:mr-20 md:w-fit items-center gap-5">
               <div>
-                <img src="/assets/geckorent.png" alt="Logo of Gecko.rent" />
+                <img
+                  className="rounded-md md:mt-10"
+                  src="/assets/geckorent.png"
+                  alt="Logo of Gecko.rent"
+                />
               </div>
               <div>
-                <img src="/assets/techstars.png" alt="Logo of Techstars" />
+                <img
+                  className="md:w-9/12 md:mt-20"
+                  src="/assets/techstars.png"
+                  alt="Logo of Techstars"
+                />
               </div>
             </div>
           </div>
