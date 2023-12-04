@@ -2,6 +2,7 @@ import React from "react";
 
 const TailwindCSS = () => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 256 256">
+    <title>Tailwind CSS</title>
     <rect width="256" height="256" fill="#242938" rx="60" />
     <path
       fill="url(#paint0_linear_2_119)"

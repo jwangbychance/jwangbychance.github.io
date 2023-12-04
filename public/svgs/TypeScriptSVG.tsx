@@ -2,6 +2,7 @@ import React from "react";
 
 const TypeScriptSVG = () => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 256 256">
+    <title>TypeScript</title>
     <rect width="256" height="256" fill="#007ACC" rx="60" />
     <path
       fill="#fff"
