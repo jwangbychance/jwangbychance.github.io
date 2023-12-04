@@ -2,9 +2,9 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="font-open-sans text-sm w-full flex justify-center md:gap-3 p-3">
+    <div className="font-open-sans text-sm w-full flex justify-center md:gap-3 px-3 border border-b-gray-200 shadow-md">
       <img
-        className="mr-auto h-10 md:h-14 self-center md:self-start"
+        className="mr-auto h-10 md:h-14 self-center"
         src="/assets/logo.png"
       ></img>
       <div className="mr-auto p-5 flex gap-3 md:-ml-24">
