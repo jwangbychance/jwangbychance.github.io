@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
     <div className="bottom-5 absolute w-full">
-      <div className="flex justify-center gap-10">
+      <div className="flex justify-center gap-8 md:gap-10">
         <a
-          className="text-black w-8 hover:text-[#8b3dff] transition-all duration-300"
+          className="text-black w-6 md:w-8 hover:text-[#8b3dff] transition-all duration-300"
           href="mailto:jackson.wang1998@outlook.com"
         >
           <svg
@@ -27,7 +27,7 @@ const Footer = () => {
           target="_blank"
         >
           <svg
-            className="w-7 h-7"
+            className="w-5 md:w-7"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
@@ -46,7 +46,7 @@ const Footer = () => {
           target="_blank"
         >
           <svg
-            className="w-6 h-6"
+            className="w-4 md:w-6"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
