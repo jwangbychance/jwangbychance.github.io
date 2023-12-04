@@ -124,7 +124,7 @@ const ProjectGrid = () => {
   return (
     <div className="font-open-sans flex flex-col">
       <Navbar />
-      <div className="flex justify-center">
+      <div className="flex justify-center mt-3">
         <div className="text-center grid md:grid-cols-4">
           {projects.map(({ title, content, tech, src, portrait }) => (
             <ProjectBox
