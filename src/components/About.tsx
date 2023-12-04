@@ -23,8 +23,8 @@ const About = () => {
           <div className="md:flex">
             <div className="md:w-4/12 flex flex-col">
               <div className="mb-5">
-                Hey, I'm Jackson, an IT and business student at the University
-                of Technology Sydney.
+                Hey, I'm Jackson, student at the University of Technology
+                Sydney.
               </div>
               <div className="mb-5">
                 I'm interested in web dev (both frontend and backend),
@@ -54,7 +54,7 @@ const About = () => {
                 meaningful contributions while continuing to grow with the
                 company.
               </div>
-              <div>
+              <div className="font-bold">
                 Check out my contributions{" "}
                 <Link
                   to="../projects"
