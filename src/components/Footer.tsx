@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="bottom-10 absolute w-full">
+    <div className="bottom-5 absolute w-full">
       <div className="flex justify-center gap-10">
         <a
           className="text-black w-8 hover:text-[#8b3dff] transition-all duration-300"
