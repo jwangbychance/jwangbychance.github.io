@@ -36,7 +36,7 @@ const Home = () => {
           </Link>
         </div>
         <a
-          href="/assets/JacksonWang_Resume.pdf"
+          href="/assets/Jackson_Wang_Resume.pdf"
           download
           className="group font-semibold text-[#8b3dff] transition-all duration-300 ease-in-out"
         >
