@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import CustomNavLink from "../common/CustomNavLink";
 
 const Navbar = () => {
   return (
@@ -7,25 +7,10 @@ const Navbar = () => {
         className="mr-auto h-10 md:h-14 self-center"
         src="/assets/logo.png"
       ></img>
-      <div className="mr-auto p-5 flex gap-3 md:-ml-24">
-        <NavLink
-          to="/"
-          className="[&.active]:bg-[#8b3dff] [&.active]:text-white [&.active]:font-semibold p-2 px-4 rounded-md hover:bg-[#d3b6ff] hover:translate-y-[-0.25rem] transition ease-in-out duration-500"
-        >
-          Home
-        </NavLink>
-        <NavLink
-          to="/about"
-          className="[&.active]:bg-[#8b3dff] [&.active]:text-white [&.active]:font-semibold p-2 px-4 rounded-md hover:bg-[#d3b6ff] hover:translate-y-[-0.25rem] transition ease-in-out duration-500"
-        >
-          About
-        </NavLink>
-        <NavLink
-          to="/projects"
-          className="[&.active]:bg-[#8b3dff] [&.active]:text-white [&.active]:font-semibold p-2 px-4 rounded-md hover:bg-[#d3b6ff] hover:translate-y-[-0.25rem] transition ease-in-out duration-500"
-        >
-          Projects
-        </NavLink>
+      <div className="mr-auto px-3 py-2 flex gap-3 md:-ml-24 bg-[#F0F0F0] shadow-sm m-2 rounded-full">
+        <CustomNavLink to="/">Home</CustomNavLink>
+        <CustomNavLink to="/about">About</CustomNavLink>
+        <CustomNavLink to="/projects">Projects</CustomNavLink>
       </div>
     </div>
   );
