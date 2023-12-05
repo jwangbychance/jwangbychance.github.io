@@ -21,7 +21,15 @@ const Home = () => {
         >
           Hey, I'm Jackson!
         </h1>
-        <img src="/assets/p5_joker.png" className="rounded-full w-28 md:w-60" />
+        <img
+          src="/assets/p5_joker.png"
+          alt="Joker from Persona 5"
+          onMouseOver={(e) =>
+            (e.currentTarget.src = "/assets/p5_joker_masked.png")
+          }
+          onMouseLeave={(e) => (e.currentTarget.src = "/assets/p5_joker.png")}
+          className="rounded-full w-40 md:w-60"
+        />
         <div>Full Stack Software Engineer</div>
         <div className="-my-5">UTS</div>
         <div>
