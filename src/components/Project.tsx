@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Modal from "react-modal";
+import ReactPlayer from "react-player";
 
 interface ProjectProps {
   title: string;
@@ -55,11 +56,12 @@ const Project: React.FC<ProjectProps> = ({
         {src.endsWith("png") ? (
           <img src={src} width={1200} />
         ) : (
-          <iframe
-            src={src}
+          <ReactPlayer
+            url={src}
+            playing
             width={window.innerHeight < 700 ? 300 : 1020}
             height={window.innerHeight < 700 ? 200 : 580}
-            allowFullScreen
+            controls
           />
         )}
       </div>
