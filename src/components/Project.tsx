@@ -54,7 +54,7 @@ const Project: React.FC<ProjectProps> = ({
       <div className="mb-10 text-sm md:text-base">{content}</div>
       <div className="flex justify-center">
         {src.endsWith("png") ? (
-          <img src={src} width={1200} />
+          <img src={src} width={1200} className="rounded-xl" />
         ) : (
           <ReactPlayer
             url={src}
@@ -62,6 +62,7 @@ const Project: React.FC<ProjectProps> = ({
             width={window.innerHeight < 700 ? 300 : 1020}
             height={window.innerHeight < 700 ? 200 : 580}
             controls
+            style={{ borderRadius: "12px", overflow: "hidden" }}
           />
         )}
       </div>
