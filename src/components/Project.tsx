@@ -59,8 +59,8 @@ const Project: React.FC<ProjectProps> = ({
           <ReactPlayer
             url={src}
             playing
-            width={window.innerHeight < 700 ? 300 : 1020}
-            height={window.innerHeight < 700 ? 200 : 580}
+            width={window.innerHeight < 700 ? "" : 1020}
+            height={window.innerHeight < 700 ? "" : 580}
             controls
             style={{ borderRadius: "12px", overflow: "hidden" }}
           />
