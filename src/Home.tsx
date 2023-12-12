@@ -46,10 +46,26 @@ const Home = () => {
         <a
           href="/assets/Jackson_Wang_Resume.pdf"
           download
-          className="group font-semibold text-[#8b3dff] transition-all duration-300 ease-in-out"
+          className="group font-semibold"
         >
-          <div className="bg-left-bottom bg-gradient-to-r from-[#8b3dff] to-[#8b3dff] bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-            Resume PDF Download
+          <div className="bg-[#8b3dff] hover:bg-[#7300e6] text-sm text-white p-3 px-4 rounded-full flex gap-2 items-center transition-all duration-200">
+            Download Resume
+            <div className="w-5 h-5">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={1.5}
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+                />
+              </svg>
+            </div>
           </div>
         </a>
       </div>
