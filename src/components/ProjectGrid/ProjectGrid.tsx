@@ -9,7 +9,7 @@ import Delivery from "../../../public/svgs/Delivery";
 import Filters from "../../../public/svgs/Filters";
 import Cart from "../../../public/svgs/Cart";
 import Search from "../../../public/svgs/Search";
-import CheckCircle from "../../../public/svgs/CheckCircle";
+import LoginAuth from "../../../public/svgs/LoginAuth";
 import Steam from "../../../public/svgs/Steam";
 
 interface ProjectBoxProps {
@@ -75,7 +75,7 @@ const projects = [
       "I created a full stack web application using the MERN stack that authenticates and authorises users using cookie sessions as a personal project.",
     tech: "React, Express.js, MongoDB, Tailwind CSS, Node.js",
     src: "/assets/login_auth.mp4",
-    portrait: <CheckCircle />,
+    portrait: <LoginAuth />,
   },
   {
     title: "Steam Tracker",
