@@ -89,7 +89,7 @@ const projects = [
   {
     title: "Wang's Therapy Centre",
     content:
-      "I collaborated to create an appointment bookings website that displays information and contacts for the business using Next.js for SEO and deployed using Vercel. The purpose of the website is to display the services Wang's Natural Therapy Centre offers, business opening hours and location of the business.",
+      "I collaborated to create an appointment bookings website that allows bookings to be made for users. The website uses technologies such as Next.js for SEO and is deployed using Vercel. The purpose of the website is to allow bookings, display the services Wang's Natural Therapy Centre offers, business opening hours and location of the business.",
     tech: "React, Next.js, Tailwind CSS",
     src: "/assets/wangs-therapy.mp4",
     portrait: "/assets/wangs-logo.png",
