@@ -17,7 +17,8 @@ interface ProjectBoxProps {
   content: string;
   tech: string;
   src: string;
-  portrait: JSX.Element;
+  portrait: JSX.Element | string;
+  link?: string;
 }
 
 const projects = [
@@ -85,6 +86,15 @@ const projects = [
     src: "/assets/steam_tracker.mp4",
     portrait: <Steam />,
   },
+  {
+    title: "Wang's Therapy Centre",
+    content:
+      "I collaborated to create an appointment bookings website that displays information and contacts for the business using Next.js for SEO and deployed using Vercel. The purpose of the website is to display the services Wang's Natural Therapy Centre offers, business opening hours and location of the business.",
+    tech: "React, Next.js, Tailwind CSS",
+    src: "/assets/wangs-therapy.mp4",
+    portrait: "/assets/wangs-logo.png",
+    link: "https://www.wangs-therapy.com/",
+  },
 ];
 
 const ProjectBox: React.FC<ProjectBoxProps> = ({
@@ -93,6 +103,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
   tech,
   src,
   portrait,
+  link,
 }) => {
   const [showModal, setShowModal] = useState(false);
   const toggleModal = () => {
@@ -105,7 +116,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
         onClick={toggleModal}
         className="flex-col gap-10 cursor-pointer text-sm font-semibold flex justify-end text-start items-start m-5 p-3 border-[#d3b6ff] border-2 rounded-xl w-[300px] h-[150px] md:w-[220px] md:h-[300px] relative top-0 hover:-top-5 transition-all ease-in-out duration-500 shadow-lg hover:bg-[#8B3DFF]/30 hover:text-[#8B3DFF]"
       >
-        {portrait}
+        {typeof portrait === "string" ? <img src={portrait} /> : portrait}
         <div className="text-black">{title}</div>
       </div>
       <Project
@@ -115,6 +126,7 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
         src={src}
         showModal={showModal}
         toggleModal={toggleModal}
+        link={link}
       />
     </div>
   );
@@ -125,14 +137,15 @@ const ProjectGrid = () => {
     <div className="font-open-sans flex flex-col">
       <Navbar />
       <div className="flex justify-center mt-3">
-        <div className="text-center grid md:grid-cols-4">
-          {projects.map(({ title, content, tech, src, portrait }) => (
+        <div className="text-center grid md:grid-cols-5">
+          {projects.map(({ title, content, tech, src, portrait, link }) => (
             <ProjectBox
               title={title}
               content={content}
               tech={tech}
               src={src}
               portrait={portrait}
+              link={link}
             />
           ))}
         </div>

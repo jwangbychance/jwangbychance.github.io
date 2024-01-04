@@ -9,6 +9,7 @@ interface ProjectProps {
   src: string;
   showModal: boolean;
   toggleModal: () => void;
+  link?: string;
 }
 
 const Project: React.FC<ProjectProps> = ({
@@ -18,6 +19,7 @@ const Project: React.FC<ProjectProps> = ({
   src,
   showModal,
   toggleModal,
+  link,
 }) => {
   return (
     <Modal
@@ -51,7 +53,12 @@ const Project: React.FC<ProjectProps> = ({
       <div className="font-semibold mb-5 text-sm md:text-base">
         Technologies: {tech}
       </div>
-      <div className="mb-10 text-sm md:text-base">{content}</div>
+      <div className="mb-10 text-sm md:text-base">
+        {content}{" "}
+        <a href={link} className="underline">
+          {link}
+        </a>
+      </div>
       <div className="flex justify-center">
         {src.endsWith("png") ? (
           <img src={src} width={1200} className="rounded-xl" />
