@@ -11,7 +11,7 @@ const About = () => {
   }, []);
 
   const externalLinkClass =
-    "font-medium text-[#8b3dff] underline decoration-[#8b3dff]/30 underline-offset-4 transition hover:decoration-[#8b3dff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b3dff] focus-visible:ring-offset-2";
+    "text-[#8b3dff] underline decoration-[#8b3dff]/30 underline-offset-4 transition hover:decoration-[#8b3dff] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b3dff] focus-visible:ring-offset-2";
 
   return (
     <div
