@@ -1,7 +1,6 @@
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
-import "./ProjectGrid.css";
 import Project from "../Project";
 import BuildingStorefront from "../../../public/svgs/BuildingStorefront";
 import Guest from "../../../public/svgs/Guest";
@@ -17,15 +16,15 @@ interface ProjectBoxProps {
   content: string;
   tech: string;
   src: string;
-  portrait: JSX.Element | string;
+  portrait: ReactNode | string;
   link?: string;
 }
 
-const projects = [
+const projects: ProjectBoxProps[] = [
   {
     title: "Gecko business landing page",
     content:
-      "I created a responsive landing page that is dynamic to each rental business with the purpose of showcasing their rental categories and products. The landing pages were specifically made for rental businesses and great for SEO. It also acts as a cool storefront for rental businesses to send all of their traffic to.",
+      "I created a responsive landing page that is dynamic to each rental business with the purpose of showcasing their rental categories and products. The landing pages were specifically made for rental businesses and great for SEO. It also acts as a storefront for rental businesses to send their traffic to.",
     tech: "React, Tailwind CSS, Next.js",
     src: "/assets/gecko-biz-landing-page.mp4",
     portrait: <BuildingStorefront />,
@@ -33,7 +32,7 @@ const projects = [
   {
     title: "Continue as guest checkout",
     content:
-      "I developed the feature to allow users to continue as guest rather than signing up to the platform at checkout for a faster user experience. This is because some users want to rent a product ASAP without having to handle the hassle that comes with creating an account. In addition, users cannot proceed with checkout unless they agree to the T&Cs (Deployed to production, video content is for staging).",
+      "I developed a feature that lets users continue as a guest instead of signing up at checkout, making the experience faster for people who want to rent a product without creating an account. Users still need to agree to the terms and conditions before checking out. The feature is deployed to production; the video shows staging.",
     tech: "MongoDB, GraphQL, React, Stripe API",
     src: "/assets/gecko-guest_checkout.png",
     portrait: <Guest />,
@@ -41,7 +40,7 @@ const projects = [
   {
     title: "Filters for specific categories",
     content:
-      "I introduced filters that dynamically render for each specific category i.e. speakers page renders filters for connectivity, chairs renders filters for foldable chairs etc. This solves the issues for users not being able to select products that are specific to there needs and creates a streamlined experience for them.",
+      "I introduced filters that dynamically render for each category. For example, the speakers page shows connectivity filters, while the chairs page shows filters for foldable chairs. This helps users find products that fit their needs.",
     tech: "Next.js, React, Tailwind CSS, Material UI",
     src: "/assets/gecko-apply-filters.mp4",
     portrait: <Filters />,
@@ -49,7 +48,7 @@ const projects = [
   {
     title: "Estimate delivery price",
     content:
-      "Prior to this feature, users had to book a product and proceed to checkout just to check the delivery costs to their address. I introduced a feature that allows users to instead estimate the delivery price for their address on product pages that have delivery available.",
+      "Previously, users had to book a product and proceed to checkout just to check delivery costs. I added a feature that lets users estimate the delivery price for their address directly on eligible product pages.",
     tech: "React.js, Tailwind CSS, GraphQL",
     src: "/assets/gecko-estimate-delivery.mp4",
     portrait: <Delivery />,
@@ -57,7 +56,7 @@ const projects = [
   {
     title: "New cart style popup",
     content:
-      "The old cart page was not optimal in terms of design and experience. When adding a product to a cart, users were redirected to a /cart page route. Instead, I reworked the way users check their cart by easily pressing the cart icon that opens a modal to instantly check all their rented products in a simple popup.",
+      "I reworked the cart experience so users can open a simple popup from the cart icon to review their rented products, rather than being redirected to a separate cart page.",
     tech: "React, Tailwind CSS",
     src: "/assets/gecko-new-cart-popup.mp4",
     portrait: <Cart />,
@@ -65,7 +64,7 @@ const projects = [
   {
     title: "New responsive searchbar",
     content:
-      "Pressing the searchbar would redirect the users to a /search page instead of quickly allowing users to search for products. I reworked the search as a popup so that users can seamlessly input what product and from where (The search was responsive for both desktop and mobile users).",
+      "I reworked search into a popup so users can quickly enter what product they’re looking for and where they need it, on both desktop and mobile.",
     tech: "React, Tailwind CSS",
     src: "/assets/gecko-new-search-desktop.mp4",
     portrait: <Search />,
@@ -73,7 +72,7 @@ const projects = [
   {
     title: "Login Auth",
     content:
-      "I created a full stack web application using the MERN stack that authenticates and authorises users using cookie sessions as a personal project.",
+      "I created a full-stack MERN application that authenticates and authorizes users with cookie-based sessions.",
     tech: "React, Express.js, MongoDB, Tailwind CSS, Node.js",
     src: "/assets/login_auth.mp4",
     portrait: <LoginAuth />,
@@ -81,7 +80,7 @@ const projects = [
   {
     title: "Steam Tracker",
     content:
-      "I created a Next.js application that allows users to search steam IDs using the Steam Web API. It displays the steam users information such as their friends, recently owned games, game news and achievements.",
+      "I created a Next.js application that lets users search Steam IDs using the Steam Web API. It displays user information such as friends, recently played games, game news, and achievements.",
     tech: "React, Next.js, Tailwind CSS",
     src: "/assets/steam_tracker.mp4",
     portrait: <Steam />,
@@ -89,7 +88,7 @@ const projects = [
   {
     title: "Wang's Therapy Centre",
     content:
-      "I collaborated to create an appointment bookings website that allows bookings to be made for users. The website uses technologies such as Next.js for SEO and is deployed using Vercel. The purpose of the website is to allow bookings, display the services Wang's Natural Therapy Centre offers, business opening hours and location of the business.",
+      "I collaborated on an appointment-booking website for Wang's Natural Therapy Centre. The site showcases its services, opening hours, and location, and lets visitors make bookings.",
     tech: "React, Next.js, Tailwind CSS",
     src: "/assets/wangs-therapy.mp4",
     portrait: "/assets/wangs-logo.png",
@@ -97,28 +96,49 @@ const projects = [
   },
 ];
 
-const ProjectBox: React.FC<ProjectBoxProps> = ({
+const ProjectBox = ({
   title,
   content,
   tech,
   src,
   portrait,
   link,
-}) => {
+}: ProjectBoxProps) => {
   const [showModal, setShowModal] = useState(false);
+
   const toggleModal = () => {
-    setShowModal((prev) => !prev);
+    setShowModal((previous) => !previous);
   };
 
   return (
-    <div>
-      <div
+    <>
+      <button
+        type="button"
         onClick={toggleModal}
-        className="flex-col gap-10 cursor-pointer text-sm font-semibold flex justify-end text-start items-start m-5 p-3 border-[#d3b6ff] border-2 rounded-xl w-[300px] h-[150px] md:w-[220px] md:h-[300px] relative top-0 hover:-top-5 transition-all ease-in-out duration-500 shadow-lg hover:bg-[#8B3DFF]/30 hover:text-[#8B3DFF]"
+        className="group flex min-h-56 w-full flex-col items-start justify-between rounded-2xl border border-[#d3b6ff]/70 bg-white p-5 text-left shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#8b3dff]/50 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#8b3dff] focus-visible:ring-offset-2"
       >
-        {typeof portrait === "string" ? <img src={portrait} /> : portrait}
-        <div className="text-black">{title}</div>
-      </div>
+        <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#8b3dff]/10 p-2 text-[#8b3dff] transition-colors group-hover:bg-[#8b3dff]/15">
+          {typeof portrait === "string" ? (
+            <img
+              src={portrait}
+              alt=""
+              className="max-h-full max-w-full object-contain"
+              loading="lazy"
+            />
+          ) : (
+            portrait
+          )}
+        </span>
+
+        <span className="mt-8 text-base font-semibold leading-snug text-gray-900 transition-colors group-hover:text-[#8b3dff]">
+          {title}
+        </span>
+
+        <span className="mt-2 text-sm font-medium text-gray-500">
+          View project <span aria-hidden="true">→</span>
+        </span>
+      </button>
+
       <Project
         title={title}
         content={content}
@@ -128,31 +148,39 @@ const ProjectBox: React.FC<ProjectBoxProps> = ({
         toggleModal={toggleModal}
         link={link}
       />
-    </div>
+    </>
   );
 };
 
 const ProjectGrid = () => {
   return (
-    <div className="font-open-sans flex flex-col">
+    <div
+      className="flex min-h-screen flex-col font-open-sans"
+      style={{
+        backgroundColor: "#faf9f7",
+        backgroundImage: `
+      radial-gradient(ellipse 55% 48% at 50% 42%, rgba(139, 61, 255, 0.09), transparent 100%),
+      radial-gradient(ellipse 80% 60% at 50% 100%, rgba(139, 61, 255, 0.035), transparent 100%)
+    `,
+      }}
+    >
       <Navbar />
-      <div className="flex justify-center mt-3">
-        <div className="text-center grid md:grid-cols-5">
-          {projects.map(({ title, content, tech, src, portrait, link }) => (
-            <ProjectBox
-              title={title}
-              content={content}
-              tech={tech}
-              src={src}
-              portrait={portrait}
-              link={link}
-            />
+
+      <main className="mx-auto w-full max-w-7xl flex-1 px-5 py-10 md:px-8 md:py-14">
+        <header className="mb-8 text-center md:mb-10">
+          <h1 className="text-3xl font-bold tracking-tight text-[#8b3dff] md:text-4xl">
+            Projects
+          </h1>
+        </header>
+
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {projects.map((project) => (
+            <ProjectBox key={project.title} {...project} />
           ))}
         </div>
-      </div>
-      <div className="relative mt-20 md:mt-[157px]">
-        <Footer />
-      </div>
+      </main>
+
+      <Footer />
     </div>
   );
 };
